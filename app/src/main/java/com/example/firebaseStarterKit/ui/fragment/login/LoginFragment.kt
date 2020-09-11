@@ -13,7 +13,7 @@ import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
 import com.facebook.FacebookException
 import com.facebook.login.LoginResult
-import com.example.firebaseStarterKit.ui.activity.host.HostActivity
+import com.example.firebaseStarterKit.ui.activity.StartActivity
 import com.example.ui.fragment.onBoarding.walkthroughactivity.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
@@ -65,8 +65,8 @@ class LoginFragment : Fragment() {
     private fun setUpObservers() {
         viewModel.navigateToHome.observe(this, Observer {
             if (it) {
-                startActivity(Intent(context, HostActivity::class.java))
-                (activity as HostActivity).finish()
+                startActivity(Intent(context, StartActivity::class.java))
+                (activity as StartActivity).finish()
                 viewModel.doneHomeNavigation()
             }
         })
@@ -82,7 +82,7 @@ class LoginFragment : Fragment() {
     }
 
     private fun signInWithGoogle() {
-        val signInIntent = (activity as HostActivity).googleSignInClient.signInIntent
+        val signInIntent = (activity as StartActivity).googleSignInClient.signInIntent
         startActivityForResult(signInIntent, RC_SIGN_IN)
     }
 }

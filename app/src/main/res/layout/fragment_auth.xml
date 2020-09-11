@@ -18,37 +18,18 @@
         <ImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_above="@id/tvWelcome"
+            android:layout_above="@id/tvStay"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
             android:src="@drawable/ic_chat"
-            android:tint="@color/colorPrimary"
-            app:layout_constraintBottom_toTopOf="@+id/tvWelcome"
+            app:layout_constraintBottom_toTopOf="@+id/tvStay"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <TextView
-            android:id="@+id/tvWelcome"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/tvStay"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="24dp"
-            android:text="@string/welcome_to_messenger"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/tvStay"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintVertical_bias="1.0"
+            app:tint="@color/colorPrimary" />
 
         <TextView
             android:id="@+id/tvStay"

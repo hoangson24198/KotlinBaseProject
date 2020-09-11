@@ -4,6 +4,7 @@
     package="com.example.ui.fragment.onBoarding.walkthroughactivity">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:name="com.example.firebaseStarterKit.utils.MyApplication"
         android:allowBackup="false"
@@ -12,10 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup">
+        <activity android:name="com.example.firebaseStarterKit.ui.activity.MainActivity"></activity>
         <activity
-            android:name="com.example.firebaseStarterKit.ui.activity.host.HostActivity"
+            android:name="com.example.firebaseStarterKit.ui.activity.StartActivity"
             android:theme="@style/AppTheme.Launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,4 +43,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>

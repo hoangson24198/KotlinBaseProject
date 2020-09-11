@@ -16,7 +16,7 @@ import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.example.firebaseStarterKit.ui.activity.host.HostActivity
+import com.example.firebaseStarterKit.ui.activity.StartActivity
 import com.example.ui.fragment.onBoarding.walkthroughactivity.R
 import com.example.ui.fragment.onBoarding.walkthroughactivity.databinding.FragmentSignUpBinding
 import com.squareup.picasso.Picasso
@@ -85,8 +85,8 @@ class SignUpFragment : Fragment() {
         })
         viewModel.navigateToHome.observe(viewLifecycleOwner, Observer {
             if (it) {
-                startActivity(Intent(context, HostActivity::class.java))
-                (activity as HostActivity).finish()
+                startActivity(Intent(context, StartActivity::class.java))
+                (activity as StartActivity).finish()
                 viewModel.doneNavigating()
             }
         })
