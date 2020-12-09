@@ -82,17 +82,54 @@ dependencies {
     //google auth
     implementation 'com.google.android.gms:play-services-auth:17.0.0'
 
+
     //loading
     api 'com.kaopiz:kprogresshud:1.2.0'
     implementation 'com.jakewharton.rxbinding:rxbinding:0.4.0'
 
     api 'com.afollestad.material-dialogs:core:0.9.6.0'
 
-    //log
-    implementation 'com.jakewharton.timber:timber:4.7.1'
-
     implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
     implementation "io.reactivex.rxjava2:rxjava:2.2.14"
+
+    //room database
+    def room_version = "2.2.5"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    // For Kotlin use kapt instead of annotationProcessor
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation "androidx.room:room-ktx:$room_version"
+    // optional - RxJava support for Room
+    implementation "androidx.room:room-rxjava2:$room_version"
+
+    implementation "com.google.code.gson:gson:2.8.6"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
+    implementation "io.reactivex.rxjava2:rxjava:2.2.14"
+    implementation "com.squareup.retrofit2:retrofit:2.8.1"
+    implementation "com.squareup.retrofit2:converter-gson:2.8.1"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.6.2"
+    implementation "com.squareup.okhttp3:okhttp:4.5.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.5.0"
+    implementation "com.squareup.okhttp3:okhttp-urlconnection:3.12.2"
+
+    //pref manafer
+    implementation "androidx.preference:preference-ktx:1.1.0"
+
+    //di koin
+    // Koin for Android
+    def koin_version = "2.1.6"
+    implementation "org.koin:koin-android:$koin_version"
+    // Koin AndroidX ViewModel features
+    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
+    // Koin AndroidX Experimental features
+    implementation "org.koin:koin-androidx-ext:$koin_version"
+
+    //for api
+    api 'com.facebook.stetho:stetho:1.5.1'
+    api('com.facebook.stetho:stetho-okhttp3:1.5.1') {
+        exclude group: 'com.facebook.stetho', module: 'stetho'
+        exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+    }
 
 }
 apply plugin: 'com.google.gms.google-services'
